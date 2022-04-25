@@ -1,1 +1,2 @@
- ![link1](https://twice.jype.com/) 
+ [link](https://twice.jype.com/) 
+ ![image](https://twice.jype.com/) 
