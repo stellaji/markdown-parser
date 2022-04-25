@@ -13,20 +13,27 @@ public class MarkdownParse {
         int currentIndex = 0;
         int tempIndex = 0;
         while(currentIndex < markdown.length() - 1) {
+            int exclaimationIdx = markdown.indexOf("!");
             int openBracket = markdown.indexOf("[", currentIndex);
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
-            //add if statement here to make program run even if there is no closing )
-            if (openParen == -1 || closeParen == -1) {
-                return toReturn;
-            }
-            if(tempIndex > currentIndex) {
+            
+            if (openParen == -1 || closeParen == -1){
                 break;
             }
+
+            if (tempIndex > currentIndex){
+                break;
+            }
+
             tempIndex = currentIndex;
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
+            if(exclaimationIdx + 1 == openBracket){
+                toReturn.remove(toReturn.size() - 1);
+            }
+            
         }
 
         return toReturn;
