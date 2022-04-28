@@ -78,7 +78,8 @@ public class MarkdownParseTest {
         ArrayList<String> actualLinks = MarkdownParse.getLinks(content);
 
         ArrayList<String> expectedLinks = new ArrayList<>();
-        expectedLinks.add("hi");
+        expectedLinks.add("https://twice.jype.com/");
+        expectedLinks.add("https://twice.jype.com/");
 
         assertEquals(expectedLinks, actualLinks);
 
@@ -92,7 +93,8 @@ public class MarkdownParseTest {
         ArrayList<String> actualLinks = MarkdownParse.getLinks(content);
 
         ArrayList<String> expectedLinks = new ArrayList<>();
-        expectedLinks.add("       ");
+        expectedLinks.add("https://something.com");
+        expectedLinks.add("some-thing.html");
 
         assertEquals(expectedLinks, actualLinks);
 
