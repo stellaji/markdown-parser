@@ -70,5 +70,18 @@ public class MarkdownParseTest {
         assertEquals(actualLinks, expectedLinks);
 
     }
+    @Test
+    public void testParse4() throws IOException {
+
+        Path fileName = Path.of("/Users/stellaji/Documents/GitHub/markdown-parser/breaking3.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> actualLinks = MarkdownParse.getLinks(content);
+
+        ArrayList<String> expectedLinks = new ArrayList<>();
+        expectedLinks.add("");
+
+        assertEquals(actualLinks, expectedLinks);
+
+    }
 }
 
