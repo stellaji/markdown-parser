@@ -23,7 +23,7 @@ public class MarkdownParseTest {
         getLinksExpected.add("https://something.com");
         getLinksExpected.add("some-thing.html");
 
-        assertEquals(actualLinks, getLinksExpected);
+        assertEquals(getLinksExpected, actualLinks);
 
     }
 
@@ -38,7 +38,7 @@ public class MarkdownParseTest {
         expectedLinks1.add("https://fn258$!lmao.com");
         expectedLinks1.add("thiswillb[r]eak.org");
 
-        assertEquals(actualLinks, expectedLinks1);
+        assertEquals(expectedLinks1, actualLinks);
 
     }
 
@@ -53,7 +53,7 @@ public class MarkdownParseTest {
         expectedLinks.add("https://something.com");
         expectedLinks.add("some-thing.html");
 
-        assertEquals(actualLinks, expectedLinks);
+        assertEquals(expectedLinks, actualLinks);
 
     }
     @Test
@@ -67,7 +67,7 @@ public class MarkdownParseTest {
         expectedLinks.add("https://twice.jype.com/");
         expectedLinks.add("https://twice.jype.com/");
 
-        assertEquals(actualLinks, expectedLinks);
+        assertEquals(expectedLinks, actualLinks);
 
     }
     @Test
@@ -78,9 +78,10 @@ public class MarkdownParseTest {
         ArrayList<String> actualLinks = MarkdownParse.getLinks(content);
 
         ArrayList<String> expectedLinks = new ArrayList<>();
-        expectedLinks.add("");
+        expectedLinks.add("hi");
 
-        assertEquals(actualLinks, expectedLinks);
+        assertEquals(expectedLinks, actualLinks);
+        //assertEquals(actualLinks, expectedLinks);
 
     }
 }
