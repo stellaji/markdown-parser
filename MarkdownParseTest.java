@@ -81,7 +81,20 @@ public class MarkdownParseTest {
         expectedLinks.add("hi");
 
         assertEquals(expectedLinks, actualLinks);
-        //assertEquals(actualLinks, expectedLinks);
+
+    }
+
+    @Test
+    public void testParse5() throws IOException {
+
+        Path fileName = Path.of("/Users/stellaji/Documents/GitHub/markdown-parser/breaking2.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> actualLinks = MarkdownParse.getLinks(content);
+
+        ArrayList<String> expectedLinks = new ArrayList<>();
+        expectedLinks.add("       ");
+
+        assertEquals(expectedLinks, actualLinks);
 
     }
 }
