@@ -15,7 +15,7 @@ public class MarkdownParseTest {
     @Test
     public void testGetLinks() throws IOException {
 
-        Path fileName = Path.of("/Users/stellaji/Documents/GitHub/markdown-parser/test-file.md");
+        Path fileName = Path.of("./test-file.md");
         String content = Files.readString(fileName);
         ArrayList<String> actualLinks = MarkdownParse.getLinks(content);
 
@@ -30,7 +30,7 @@ public class MarkdownParseTest {
     @Test
     public void testParse1() throws IOException {
 
-        Path fileName = Path.of("/Users/stellaji/Documents/GitHub/markdown-parser/breaking1.md");
+        Path fileName = Path.of("./breaking1.md");
         String content = Files.readString(fileName);
         ArrayList<String> actualLinks = MarkdownParse.getLinks(content);
 
@@ -45,7 +45,7 @@ public class MarkdownParseTest {
     @Test
     public void testParse2() throws IOException {
 
-        Path fileName = Path.of("/Users/stellaji/Documents/GitHub/markdown-parser/breaking2.md");
+        Path fileName = Path.of("./breaking2.md");
         String content = Files.readString(fileName);
         ArrayList<String> actualLinks = MarkdownParse.getLinks(content);
 
@@ -59,7 +59,7 @@ public class MarkdownParseTest {
     @Test
     public void testParse3() throws IOException {
 
-        Path fileName = Path.of("/Users/stellaji/Documents/GitHub/markdown-parser/breaking3.md");
+        Path fileName = Path.of("./breaking3.md");
         String content = Files.readString(fileName);
         ArrayList<String> actualLinks = MarkdownParse.getLinks(content);
 
@@ -73,7 +73,7 @@ public class MarkdownParseTest {
     @Test
     public void testParse4() throws IOException {
 
-        Path fileName = Path.of("/Users/stellaji/Documents/GitHub/markdown-parser/breaking3.md");
+        Path fileName = Path.of("./breaking3.md");
         String content = Files.readString(fileName);
         ArrayList<String> actualLinks = MarkdownParse.getLinks(content);
 
@@ -88,7 +88,7 @@ public class MarkdownParseTest {
     @Test
     public void testParse5() throws IOException {
 
-        Path fileName = Path.of("/Users/stellaji/Documents/GitHub/markdown-parser/breaking2.md");
+        Path fileName = Path.of("./breaking2.md");
         String content = Files.readString(fileName);
         ArrayList<String> actualLinks = MarkdownParse.getLinks(content);
 
