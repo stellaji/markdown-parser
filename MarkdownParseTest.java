@@ -13,6 +13,11 @@ public class MarkdownParseTest {
     }
 
     @Test
+    public void addition2() {
+	assertEquals(5, 2 + 3);
+    }
+
+    @Test
     public void testGetLinks() throws IOException {
 
         Path fileName = Path.of("./test-file.md");
