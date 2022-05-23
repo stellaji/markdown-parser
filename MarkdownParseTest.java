@@ -104,5 +104,20 @@ public class MarkdownParseTest {
         assertEquals(expectedLinks, actualLinks);
 
     }
+
+    @Test
+    public void testSnippet1() throws IOException {
+        Path fileName = Path.of("snippet1.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> actualLinks = MarkdownParse.getLinks(content);
+
+        ArrayList<String> expectedLinks = new ArrayList<>();
+        expectedLinks.add("url.com");
+        expectedLinks.add("`google.com");
+        expectedLinks.add("google.com");
+        expectedLinks.add("ucsd.edu");
+
+        assertEquals(expectedLinks, actualLinks);
+    }
 }
 
